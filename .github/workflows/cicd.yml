@@ -1,11 +1,11 @@
 name: CICD
-
+# Pipeline condition
 on:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-    
+
 jobs:
   # Build Workflow
   build:
