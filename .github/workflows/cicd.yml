@@ -1,5 +1,6 @@
 name: CICD
 # Pipeline condition
+
 on:
   push:
     branches: [ "master" ]
@@ -35,6 +36,6 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --clean
+          args: release
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
