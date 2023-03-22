@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// Gattopuccino by Devmentat
 	// Get the command line arguments
 	arguments := os.Args
 	flavor := arguments[1] // The flavor of the coffee
