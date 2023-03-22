@@ -9,19 +9,31 @@ import (
 func main() {
 	// Gattopuccino by Devmentat
 	// Get the command line arguments
-	arguments := os.Args
-	flavor := arguments[1] // The flavor of the coffee
-	image := arguments[2]  // The name of the input image
+	if len(os.Args) != 3 {
+		fmt.Println("Usage: gattopuccino <flavor> <image>")
+		return
+	}
+	flavor := os.Args[1] // The flavor of the coffee
+	image := os.Args[2]  // The name of the input image
 
 	// Get the current working directory
-	currentDirectory, _ := os.Getwd()
+	currentDirectory, err := os.Getwd()
+	if err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
 
 	// Set the output directory name
 	outputDir := "output"
 
-	var command string
+	// Create the output directory if it does not exist
+	if err := os.MkdirAll(outputDir, 0755); err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
 
-	// Build the command based on the chosen flavor
+	// Check if the flavor is recognized
+	var command string
 	switch flavor {
 	case "latte":
 		// Use the "latte" flavor
@@ -37,23 +49,16 @@ func main() {
 		command = fmt.Sprintf("cd %s ; magick %s flavors/mocha-hald-clut.png -hald-clut %s/%s-%s", currentDirectory, image, outputDir, flavor, image)
 	default:
 		// Flavor not recognized
-		command = ""
-	}
-
-	// Check if the flavor is recognized
-	if command == "" {
-		fmt.Println("Flavor not found")
+		fmt.Println("Error: flavor not recognized")
+		fmt.Println("Usage: gattopuccino <flavor> <image>")
 		return
 	}
 
-	// Create the output directory if it does not exist
-	if err := os.MkdirAll(outputDir, 0755); err != nil {
-		fmt.Println("Error: ", err)
-		return
-	}
+	// Build the command based on the chosen flavor
+	cmd := exec.Command("bash", "-c", command)
+	cmd.Dir = currentDirectory
 
 	// Execute the command to generate the output image
-	cmd := exec.Command("bash", "-c", command)
 	if err := cmd.Run(); err != nil {
 		fmt.Println("Error: ", err)
 		return
