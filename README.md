@@ -16,3 +16,4 @@ Flavor available: "latte", "frappe", "macchiato", or "mocha".
 Based on Catppuccin theme and Catppuccinifier script.
 
 
+[![codecov](https://codecov.io/gh/DevMentat/GattoPuccino/branch/master/graph/badge.svg?token=5UhrJpsjTH)](https://codecov.io/gh/DevMentat/GattoPuccino)
