@@ -1,0 +1,38 @@
+# Brew Release Configuration File
+brews:
+  - 
+    # Project Name
+    name: GattoPuccino
+
+    # Specify GOARM Version
+    goarm: 6
+
+    # Specify GOAMD64
+    goamd64: v3
+
+    # Github repository to push the forumula to
+    tap:
+      # Owner
+      owner: devmentat
+
+      # Repo Name
+      name: GattoPuccino
+
+      # No Token I think
+
+    # Folder with the formula
+    folder: Formula
+    
+    # Forumula Infos
+    homepage: https://github.com/DevMentat/GattoPuccino/
+    description: GattoPuccino is a command-line tool that takes an image file and applies a coffee-themed color palette to it. It supports four different flavors - latte, frappe, macchiato, and mocha. GattoPuccino uses the ImageMagick cli tool to apply the color palette.
+    caveats: "gattopuccino <flavor> <image> (Flavor available: latte, frappe, macchiato, or mocha)"
+
+    # Commit message
+    commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+
+    # Packages dependencies
+    dependencies:
+      - name: imagemagick
+
+    
