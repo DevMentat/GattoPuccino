@@ -16,12 +16,9 @@ brews:
       owner: devmentat
 
       # Repo Name
-      name: GattoPuccino
+      name: homebrew-formulae
 
-      # No Token I think
-
-    # Folder with the formula
-    folder: Formula
+        # No Token I think
     
     # Forumula Infos
     homepage: https://github.com/DevMentat/GattoPuccino/
