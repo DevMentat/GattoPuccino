@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Update the Go module dependencies using the default strategy
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Exclude the test dependencies
+    ignore:
+      - dependency-name: "github.com/stretchr/testify"
+      - dependency-name: "github.com/golang/mock"
