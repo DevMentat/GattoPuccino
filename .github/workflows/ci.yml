@@ -15,6 +15,6 @@ jobs:
         with:
           go-version: '1.20.2'
       - name: Run coverage
-        run: go test --cov-report=xml
+        run: go test --cov-report=txt
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
