@@ -2,7 +2,7 @@
 brews:
   - 
     # Project Name
-    name: gattopuccino
+    name: GattoPuccino
 
     # Specify GOARM Version
     goarm: 6
@@ -17,7 +17,8 @@ brews:
 
       # Repo Name
       name: homebrew-formulae
-    
+   
+    url_template: "https://github.com/DevMentat/GattoPuccino/releases/download/{{ .Tag }}/{{ .ArtifactName }}"        
     # Forumula Infos
     homepage: https://github.com/DevMentat/GattoPuccino/
     description: GattoPuccino is a command-line tool that takes an image file and applies a coffee-themed color palette to it. It supports four different flavors - latte, frappe, macchiato, and mocha. GattoPuccino uses the ImageMagick cli tool to apply the color palette.
