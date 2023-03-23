@@ -19,6 +19,9 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Output
+output/*
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
@@ -26,9 +29,18 @@
 go.work
 
 ### Images ###
-# JPEG
+# Exclude all images except for flavors/*.png and test_image.png
 *.jpg
 *.jpeg
+*.gif
+*.bmp
+*.png
+!flavors/*.png
+!test-image.jpg
+
+# Exclude the output directory
+output/
+
 
 ### macOS ###
 # General
