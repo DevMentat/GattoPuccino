@@ -1,4 +1,5 @@
 # GattoPuccino
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/devmentat/GattoPuccino) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/devmentat/gattopuccino) [![codecov](https://codecov.io/gh/DevMentat/GattoPuccino/branch/master/graph/badge.svg?token=5UhrJpsjTH)](https://codecov.io/gh/DevMentat/GattoPuccino)
 
 GattoPuccino is a command-line tool that takes an image file and applies a coffee-themed color palette to it. It supports four different flavors - latte, frappe, macchiato, and mocha. GattoPuccino uses the ImageMagick cli tool to apply the color palette.
 
@@ -15,5 +16,3 @@ Flavor available: "latte", "frappe", "macchiato", or "mocha".
 
 Based on Catppuccin theme and Catppuccinifier script.
 
-
-[![codecov](https://codecov.io/gh/DevMentat/GattoPuccino/branch/master/graph/badge.svg?token=5UhrJpsjTH)](https://codecov.io/gh/DevMentat/GattoPuccino)
