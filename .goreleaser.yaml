@@ -17,8 +17,6 @@ brews:
 
       # Repo Name
       name: homebrew-formulae
-
-        # No Token I think
     
     # Forumula Infos
     homepage: https://github.com/DevMentat/GattoPuccino/
@@ -32,4 +30,7 @@ brews:
     dependencies:
       - name: imagemagick
 
-    
+    test: |
+      system "#{bin}/GattoPuccino"
+    install: |
+      bin.install "GattoPuccino"
