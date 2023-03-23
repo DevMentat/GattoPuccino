@@ -2,7 +2,7 @@
 brews:
   - 
     # Project Name
-    name: GattoPuccino
+    name: gattopuccino
 
     # Specify GOARM Version
     goarm: 6
