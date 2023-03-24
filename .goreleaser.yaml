@@ -13,7 +13,7 @@ brews:
     # Github repository to push the forumula to
     tap:
       # Owner
-      owner: devmentat
+      owner: DevMentat
 
       # Repo Name
       name: homebrew-formulae
@@ -31,7 +31,3 @@ brews:
     dependencies:
       - name: imagemagick
 
-    test: |
-      system "#{bin}/GattoPuccino"
-    install: |
-      bin.install "GattoPuccino"
