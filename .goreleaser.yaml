@@ -2,7 +2,7 @@
 brews:
   - 
     # Project Name
-    name: goodgatto
+    name: GattoPuccino
 
     # Github repository to push the forumula to
     tap:
