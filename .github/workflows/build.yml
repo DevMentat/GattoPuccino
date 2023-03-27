@@ -62,10 +62,10 @@ jobs:
         run: go test -v -count=1 -race -shuffle=on -coverprofile=coverage.txt ./...
       
       - name: Install Govulncheck
-        uses: go install golang.org/x/vuln/cmd/govulncheck@latest
+        run: go install golang.org/x/vuln/cmd/govulncheck@latest
 
       - name: Run Govulncheck    
-        uses: govulcheck -test ./...
+        run: govulcheck -test ./...
 
       - name: Upload Coverage 
         if: ${{ !inputs.skipTests }}
