@@ -12,6 +12,9 @@ GattoPuccino is a command-line tool that takes an image file and applies a coffe
 
 Flavor available: "latte", "frappe", "macchiato", or "mocha".
 
+## Install with Brew
+Soon.
+
 ## Credits
 
 Based on Catppuccin theme and Catppuccinifier script.
