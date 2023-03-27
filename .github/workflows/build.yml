@@ -2,9 +2,9 @@ name: Go
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   pull_request:
-    branches: ["main"]
+    branches: ["master"]
   schedule:
     - cron: '0 14 * * 1' # Each Monday at 2pm
   workflow_call:
