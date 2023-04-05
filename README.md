@@ -2,13 +2,15 @@
 
 [![GoBuild Widget]][GoBuild Status]
 [![GoReport Widget]][GoReport Status]
-![GitHubRelease Badge]
-![GoModVersion Badge]
+[![GitHubRelease Badge]][GithubRelease Status]
+[![GoModVersion Badge]][GoModVersion Status]
 
 [GoBuild Status]: https://github.com/DevMentat/GattoPuccino/actions/workflows/build.yml
 [GoBuild Widget]: https://github.com/DevMentat/GattoPuccino/actions/workflows/build.yml/badge.svg
 [GithubRelease Badge]: https://img.shields.io/github/v/release/devmentat/gattopuccino
+[GithubRelease Status]: https://github.com/DevMentat/GattoPuccino/releases/latest
 [GoModVersion Badge]: https://img.shields.io/github/go-mod/go-version/devmentat/GattoPuccino
+[GoModVersion Status]: https://github.com/DevMentat/GattoPuccino/blob/master/go.mod
 [GoReport Status]: https://goreportcard.com/report/github.com/DevMentat/GattoPuccino
 [GoReport Widget]: https://goreportcard.com/badge/github.com/DevMentat/GattoPuccino
 
