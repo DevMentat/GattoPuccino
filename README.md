@@ -1,9 +1,12 @@
 # GattoPuccino
 
-[![Go Build](https://github.com/DevMentat/GattoPuccino/actions/workflows/build.yml/badge.svg)](https://github.com/DevMentat/GattoPuccino/actions/workflows/build.yml)
+[![GoBuild Widget]][GoBuild Status]
 [![GoReport Widget]][GoReport Status]
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/devmentat/gattopuccino)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/devmentat/GattoPuccino)
+
+[GoBuild Status]: https://github.com/DevMentat/GattoPuccino/actions/workflows/build.yml
+[GoBuild Widget]: https://github.com/DevMentat/GattoPuccino/actions/workflows/build.yml/badge.svg
 
 [GoReport Status]: https://goreportcard.com/report/github.com/DevMentat/GattoPuccino
 [GoReport Widget]: https://goreportcard.com/badge/github.com/DevMentat/GattoPuccino
