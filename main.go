@@ -15,6 +15,11 @@ func main() {
 	flavor := os.Args[1]
 	image := os.Args[2]
 
+	if _, err := os.Stat(image); os.IsNotExist(err) {
+		fmt.Printf("Error: image file '%s' not found\n", image)
+		return
+	}
+
 	currentDirectory, err := os.Getwd()
 	if err != nil {
 		fmt.Println("Error: ", err)

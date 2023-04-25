@@ -5,24 +5,26 @@ import (
 	"testing"
 )
 
-func TestMain(m *testing.M) {
-	// Save original arguments and restore them after tests
+func TestMain(t *testing.T) {
 	origArgs := os.Args
 	defer func() { os.Args = origArgs }()
 
 	testCases := []struct {
-		args []string
+		description string
+		args        []string
 	}{
-		{[]string{"gattopuccino", "latte", "test-image.jpg"}},
-		{[]string{"gattopuccino", "invalid-flavor", "test-image.jpg"}},
-		{[]string{"gattopuccino"}},
-		{[]string{"gattopuccino", "latte"}},
-		{[]string{"gattopuccino", "test-image.jpg"}},
-		{[]string{"gattopuccino", "latte", "missing-image.jpg"}},
+		{"Valid input", []string{"gattopuccino", "latte", "test-image.jpg"}},
+		{"Invalid flavor", []string{"gattopuccino", "invalid-flavor", "test-image.jpg"}},
+		{"Missing input arguments", []string{"gattopuccino"}},
+		{"Missing image argument", []string{"gattopuccino", "latte"}},
+		{"Missing flavor argument", []string{"gattopuccino", "test-image.jpg"}},
+		{"Missing image file", []string{"gattopuccino", "latte", "missing-image.jpg"}},
 	}
 
 	for _, tc := range testCases {
-		os.Args = tc.args
-		main()
+		t.Run(tc.description, func(t *testing.T) {
+			os.Args = tc.args
+			main()
+		})
 	}
 }
